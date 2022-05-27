@@ -13,15 +13,13 @@ protocol CategoriesListDelegate{
 }
 class CategoriesTableViewController: UITableViewController {
     
-    
-    private var service = CategoryService()
     private var viewModel : CategoryViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupView()
-        viewModel = CategoryViewModel(categoryService: service, delegate: self)
+        viewModel = CategoryViewModel(categoryService: CategoryService(), delegate: self)
         viewModel?.getCategory()
     }
     
@@ -29,10 +27,18 @@ class CategoriesTableViewController: UITableViewController {
     //MARK: - setupView
     func setupView(){
         navigationController?.title = "Categories"
+
         tableView.dataSource = self
         tableView.delegate = self
         
-        tableView.register(UINib(nibName: "CategoryTableViewCell", bundle: nil), forCellReuseIdentifier: "custonCell")
+        tableView.register(UINib(nibName: "ShowTitleTableViewCell", bundle: nil), forCellReuseIdentifier: "custonCell")
+        
+    }
+    
+    func setupTabBar(){
+        let tabBarController = TabBarViewController()
+        tabBarController.modalPresentationStyle = .overFullScreen
+        self.present(tabBarController, animated: true)
     }
     
     //MARK: - UITableViewDelegate
@@ -55,7 +61,7 @@ class CategoriesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "custonCell", for: indexPath) as? CategoryTableViewCell else{return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "custonCell", for: indexPath) as? ShowTitleTableViewCell else{return UITableViewCell()}
         cell.titleCell.text = viewModel?.getCategories(at: indexPath.row).name
         return cell
     }

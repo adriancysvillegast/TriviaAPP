@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		092A4738283DD1FF003E4B66 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A4736283DD1FE003E4B66 /* CategoryTableViewCell.swift */; };
-		092A4739283DD1FF003E4B66 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 092A4737283DD1FE003E4B66 /* CategoryTableViewCell.xib */; };
+		092A4738283DD1FF003E4B66 /* ShowTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A4736283DD1FE003E4B66 /* ShowTitleTableViewCell.swift */; };
+		092A4739283DD1FF003E4B66 /* ShowTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 092A4737283DD1FE003E4B66 /* ShowTitleTableViewCell.xib */; };
 		092A473B283DD46F003E4B66 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A473A283DD46F003E4B66 /* CategoryViewModel.swift */; };
 		092A473D283DD4D2003E4B66 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A473C283DD4D2003E4B66 /* CategoryService.swift */; };
 		092A473F283DD5FB003E4B66 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A473E283DD5FB003E4B66 /* Constants.swift */; };
@@ -23,6 +23,12 @@
 		096FBE31283FE03800A7359E /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096FBE30283FE03800A7359E /* Questions.swift */; };
 		096FBE33283FE1C700A7359E /* QuestionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096FBE32283FE1C700A7359E /* QuestionService.swift */; };
 		096FBE35283FE60A00A7359E /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096FBE34283FE60A00A7359E /* QuestionViewModel.swift */; };
+		096FBE3D28400A4B00A7359E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096FBE3C28400A4B00A7359E /* TabBarViewController.swift */; };
+		096FBE4428400E7900A7359E /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096FBE4228400E7900A7359E /* RandomViewController.swift */; };
+		096FBE4528400E7900A7359E /* RandomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 096FBE4328400E7900A7359E /* RandomViewController.xib */; };
+		096FBE472840212D00A7359E /* RandomQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096FBE462840212D00A7359E /* RandomQuestions.swift */; };
+		096FBE492840221E00A7359E /* RandomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096FBE482840221E00A7359E /* RandomService.swift */; };
+		096FBE4B2840247400A7359E /* RandomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096FBE4A2840247400A7359E /* RandomViewModel.swift */; };
 		09EBC841283B039D005E5B05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EBC840283B039D005E5B05 /* AppDelegate.swift */; };
 		09EBC843283B039D005E5B05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EBC842283B039D005E5B05 /* SceneDelegate.swift */; };
 		09EBC84A283B03A2005E5B05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09EBC849283B03A2005E5B05 /* Assets.xcassets */; };
@@ -59,8 +65,8 @@
 
 /* Begin PBXFileReference section */
 		01CBE0E368ADF43FB1B921E1 /* Pods-TriviaAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriviaAPP.debug.xcconfig"; path = "Target Support Files/Pods-TriviaAPP/Pods-TriviaAPP.debug.xcconfig"; sourceTree = "<group>"; };
-		092A4736283DD1FE003E4B66 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
-		092A4737283DD1FE003E4B66 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
+		092A4736283DD1FE003E4B66 /* ShowTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTitleTableViewCell.swift; sourceTree = "<group>"; };
+		092A4737283DD1FE003E4B66 /* ShowTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowTitleTableViewCell.xib; sourceTree = "<group>"; };
 		092A473A283DD46F003E4B66 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		092A473C283DD4D2003E4B66 /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
 		092A473E283DD5FB003E4B66 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -75,6 +81,12 @@
 		096FBE30283FE03800A7359E /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		096FBE32283FE1C700A7359E /* QuestionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionService.swift; sourceTree = "<group>"; };
 		096FBE34283FE60A00A7359E /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
+		096FBE3C28400A4B00A7359E /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		096FBE4228400E7900A7359E /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
+		096FBE4328400E7900A7359E /* RandomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RandomViewController.xib; sourceTree = "<group>"; };
+		096FBE462840212D00A7359E /* RandomQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuestions.swift; sourceTree = "<group>"; };
+		096FBE482840221E00A7359E /* RandomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomService.swift; sourceTree = "<group>"; };
+		096FBE4A2840247400A7359E /* RandomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewModel.swift; sourceTree = "<group>"; };
 		09EBC83D283B039D005E5B05 /* TriviaAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriviaAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EBC840283B039D005E5B05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09EBC842283B039D005E5B05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +178,57 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		096FBE362840065600A7359E /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				096FBE372840066D00A7359E /* View */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		096FBE372840066D00A7359E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				096FBE3C28400A4B00A7359E /* TabBarViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		096FBE3E28400DFC00A7359E /* Random */ = {
+			isa = PBXGroup;
+			children = (
+				096FBE4128400E1900A7359E /* View */,
+				096FBE4028400E0F00A7359E /* Service */,
+				096FBE3F28400E0700A7359E /* ViewModel */,
+			);
+			path = Random;
+			sourceTree = "<group>";
+		};
+		096FBE3F28400E0700A7359E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				096FBE4A2840247400A7359E /* RandomViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		096FBE4028400E0F00A7359E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				096FBE482840221E00A7359E /* RandomService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		096FBE4128400E1900A7359E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				096FBE4228400E7900A7359E /* RandomViewController.swift */,
+				096FBE4328400E7900A7359E /* RandomViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		09EBC834283B039D005E5B05 = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +294,8 @@
 		09EBC871283B05D0005E5B05 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				092A4736283DD1FE003E4B66 /* ShowTitleTableViewCell.swift */,
+				092A4737283DD1FE003E4B66 /* ShowTitleTableViewCell.xib */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -256,6 +321,8 @@
 		09EBC874283B0623005E5B05 /* Moduls */ = {
 			isa = PBXGroup;
 			children = (
+				096FBE3E28400DFC00A7359E /* Random */,
+				096FBE362840065600A7359E /* TabBar */,
 				092A4740283DEE2C003E4B66 /* Welcome */,
 				09EBC876283B0661005E5B05 /* QuestionsList */,
 				09EBC875283B064E005E5B05 /* CategoriesList */,
@@ -304,8 +371,6 @@
 			children = (
 				09EBC87D283B087A005E5B05 /* CategoriesTableViewController.swift */,
 				09EBC87E283B087A005E5B05 /* CategoriesTableViewController.xib */,
-				092A4736283DD1FE003E4B66 /* CategoryTableViewCell.swift */,
-				092A4737283DD1FE003E4B66 /* CategoryTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -341,6 +406,7 @@
 				09EBC886283BE8CB005E5B05 /* Categories.swift */,
 				09EBC884283BE7A3005E5B05 /* Category.swift */,
 				096FBE30283FE03800A7359E /* Questions.swift */,
+				096FBE462840212D00A7359E /* RandomQuestions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -478,9 +544,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				096FBE2F283FDF1A00A7359E /* QuestionsTableViewController.xib in Resources */,
+				096FBE4528400E7900A7359E /* RandomViewController.xib in Resources */,
 				092A4747283DEE95003E4B66 /* WelcomeViewController.xib in Resources */,
 				09EBC880283B087A005E5B05 /* CategoriesTableViewController.xib in Resources */,
-				092A4739283DD1FF003E4B66 /* CategoryTableViewCell.xib in Resources */,
+				092A4739283DD1FF003E4B66 /* ShowTitleTableViewCell.xib in Resources */,
 				09EBC84D283B03A2005E5B05 /* LaunchScreen.storyboard in Resources */,
 				09EBC84A283B03A2005E5B05 /* Assets.xcassets in Resources */,
 				096FBE29283FCF8000A7359E /* AboutTriviaViewController.xib in Resources */,
@@ -615,17 +682,22 @@
 				096FBE2E283FDF1A00A7359E /* QuestionsTableViewController.swift in Sources */,
 				09EBC87F283B087A005E5B05 /* CategoriesTableViewController.swift in Sources */,
 				092A4749283DFEB1003E4B66 /* WelcomeViewModel.swift in Sources */,
+				096FBE4B2840247400A7359E /* RandomViewModel.swift in Sources */,
 				09EBC885283BE7A3005E5B05 /* Category.swift in Sources */,
+				096FBE4428400E7900A7359E /* RandomViewController.swift in Sources */,
 				096FBE31283FE03800A7359E /* Questions.swift in Sources */,
 				092A4746283DEE95003E4B66 /* WelcomeViewController.swift in Sources */,
 				09EBC841283B039D005E5B05 /* AppDelegate.swift in Sources */,
 				092A473D283DD4D2003E4B66 /* CategoryService.swift in Sources */,
 				09EBC883283BE0B0005E5B05 /* CallAPI.swift in Sources */,
+				096FBE3D28400A4B00A7359E /* TabBarViewController.swift in Sources */,
 				092A473F283DD5FB003E4B66 /* Constants.swift in Sources */,
+				096FBE472840212D00A7359E /* RandomQuestions.swift in Sources */,
 				096FBE33283FE1C700A7359E /* QuestionService.swift in Sources */,
 				092A473B283DD46F003E4B66 /* CategoryViewModel.swift in Sources */,
 				09EBC843283B039D005E5B05 /* SceneDelegate.swift in Sources */,
-				092A4738283DD1FF003E4B66 /* CategoryTableViewCell.swift in Sources */,
+				092A4738283DD1FF003E4B66 /* ShowTitleTableViewCell.swift in Sources */,
+				096FBE492840221E00A7359E /* RandomService.swift in Sources */,
 				09EBC887283BE8CB005E5B05 /* Categories.swift in Sources */,
 				096FBE35283FE60A00A7359E /* QuestionViewModel.swift in Sources */,
 				096FBE2B283FDB6600A7359E /* AboutTriviaViewModel.swift in Sources */,

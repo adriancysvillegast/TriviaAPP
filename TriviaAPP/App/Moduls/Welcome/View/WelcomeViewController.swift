@@ -41,6 +41,8 @@ class WelcomeViewController: UIViewController {
     @IBAction func aboutTriviaButtonTapped(_ sender: UIButton) {
         viewModel?.showInfoAboutTrivia()
     }
+    
+    
 }
 //MARK: - WelcomeViewDelegate
 extension WelcomeViewController: WelcomeViewDelegate{
@@ -66,11 +68,14 @@ extension WelcomeViewController: WelcomeViewDelegate{
     }
     
     func nextView() {
-        let nextView = CategoriesTableViewController()
-        self.navigationController?.pushViewController(nextView, animated: true)
+        
+        
+//        test
+//        let nextView = RandomViewController()
+//        self.navigationController?.pushViewController(nextView, animated: true)
+        let tabBarController = TabBarViewController()
+        tabBarController.modalPresentationStyle = .overFullScreen
+        self.present(tabBarController, animated: true)
     }
-    
-    
-    
 }
 

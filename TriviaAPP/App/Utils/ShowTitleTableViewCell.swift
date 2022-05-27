@@ -1,5 +1,5 @@
 //
-//  CategoryTableViewCell.swift
+//  ShowTitleTableViewCell.swift
 //  TriviaAPP
 //
 //  Created by Adriancys Jesus Villegas Toro on 24/5/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CategoryTableViewCell: UITableViewCell {
+class ShowTitleTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleCell: UILabel!
     override func awakeFromNib() {

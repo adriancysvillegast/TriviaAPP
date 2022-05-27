@@ -11,9 +11,10 @@ class QuestionViewModel{
     
     private var service : QuestionService?
     private var questions = [QuestionValue]()
-    
-    init(service: QuestionService){
+    private var delegate : QuestionsViewDelegate?
+    init(service: QuestionService, delegate: QuestionsViewDelegate){
         self.service = service
+        self.delegate = delegate
     }
     
     
@@ -22,11 +23,19 @@ class QuestionViewModel{
             service?.getQuestions(url: url, onComplete: { questions in
                 self.questions = questions
     //            METER DELEGADO PARA CAMBIAR VISTA
-                print(questions)
+                self.validateData(data: questions)
             }, onError: {
-                print("SE ESCOÑETO ESTA MIERDA")
-    //            PRINT ERROR
+                
+                self.delegate?.showErrorWithApi(message: Constants().errorWithAPI)
             })
+    }
+    
+    func validateData(data: [QuestionValue]){
+        if data.isEmpty{
+            self.delegate?.showErrorWithApi(message: Constants().errorWithCategories)
+        }else{
+            self.delegate?.updateView()
+        }
     }
     
     func getQuestionCount()-> Int{

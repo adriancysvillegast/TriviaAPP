@@ -11,6 +11,7 @@ struct Constants{
     
     let urlCategory = "https://opentdb.com/api_category.php"
     let urlQuestions = "https://opentdb.com/api.php?amount=10&difficulty=easy&type=boolean&category="
-    
-
+    let errorWithAPI = "We cannot get the data, try again"
+    let errorWithCategories = "The API haven't questions on this category"
+    let urlRandom = "https://opentdb.com/api.php?amount=50&difficulty=easy&type=boolean"
 }
