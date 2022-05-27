@@ -24,7 +24,7 @@ class WelcomeViewController: UIViewController {
     var viewModel : WelcomeViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        textField.delegate = self
         viewModel = WelcomeViewModel(delegate: self)
         buttonOutlet.isHidden = false
     }
@@ -43,6 +43,15 @@ class WelcomeViewController: UIViewController {
     }
     
     
+}
+
+//MARK: - TextFieldDelegate
+extension WelcomeViewController: UITextFieldDelegate {
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
 //MARK: - WelcomeViewDelegate
 extension WelcomeViewController: WelcomeViewDelegate{
@@ -68,14 +77,10 @@ extension WelcomeViewController: WelcomeViewDelegate{
     }
     
     func nextView() {
-        
-        
-//        test
-//        let nextView = RandomViewController()
-//        self.navigationController?.pushViewController(nextView, animated: true)
         let tabBarController = TabBarViewController()
         tabBarController.modalPresentationStyle = .overFullScreen
         self.present(tabBarController, animated: true)
     }
 }
+
 

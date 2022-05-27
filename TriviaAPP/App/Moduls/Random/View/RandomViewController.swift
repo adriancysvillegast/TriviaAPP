@@ -8,7 +8,9 @@
 import UIKit
 
 protocol RandonViewDelegate{
-    func updateIndex() -> Int
+    func showErrorApi()
+    func showResult(message: String)
+    
 }
 class RandomViewController: UIViewController {
 
@@ -19,20 +21,16 @@ class RandomViewController: UIViewController {
     @IBOutlet weak var falseOutlet: UIButton!
     
     private var viewModel : RandomViewModel?
-    
-    var index = 0
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = RandomViewModel(service: RandomService(), delegate: self)
         messageResultLabel.isHidden = true
         nextQuestionOutlet.isHidden = true
         
-        
         viewModel?.getRandomQuestion()
         setupView()
-        
-        showData()
+        showQuestions()
     }
 
     func setupView(){
@@ -40,21 +38,26 @@ class RandomViewController: UIViewController {
         falseOutlet.layer.cornerRadius = 30
     }
     
-    func showData(){
-        questionLabel.text = viewModel?.showQuestion()
+    func showQuestions(){
+        questionLabel.text = viewModel?.validateArray()
+//        if let index = viewModel?.indexQuestion{
+//            let value = viewModel?.setQuestion(index: index)
+//            questionLabel.text = value
+//        }
     }
-    
-    
     @IBAction func trueButtonTapped(_ sender: UIButton) {
-        viewModel?.validateAnswer(value: (viewModel?.isTrue())!)
+        let result = viewModel?.isTrue()
+        viewModel?.validateAnswer(value: result!)
+        
     }
     
     @IBAction func falseButtonTapped(_ sender: UIButton) {
-        viewModel?.validateAnswer(value: (viewModel?.isFalse())!)
+        let result = viewModel?.isFalse()
+        viewModel?.validateAnswer(value: result!)
     }
     
     @IBAction func newQuestionButtonTapped(_ sender: UIButton) {
-        
+        _ = viewModel?.updateQuestion()
     }
     
     
@@ -62,10 +65,16 @@ class RandomViewController: UIViewController {
 
 //MARK: - RandonViewDelegate
 extension RandomViewController: RandonViewDelegate{
-    func updateIndex()-> Int {
-        let value = 0
-        return value
+    func showResult(message: String) {
+        messageResultLabel.isHidden = false
+        nextQuestionOutlet.isHidden = false
+    
+        messageResultLabel.text = message
     }
     
-    
+    func showErrorApi() {
+        let alert = UIAlertController(title: "Error", message: Constants().errorWithAPI, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        present(alert, animated: true)
+    }
 }
